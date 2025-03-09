@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFCSnd by H64Ox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        button {
+            flex: 1; /* Ocupa el 50% de la pantalla cada uno */
+            font-size: 24px;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:nth-child(1) { background: #ff5733; } /* Color diferente para cada botón */
+        button:nth-child(2) { background: #3399ff; }
+        button:active { opacity: 0.7; } /* Efecto al presionar */
+    </style>
+</head>
+<body>
+    <button onclick="reproducirSonido('sonido1.mp3')">NFCSnd</button>
+    <button onclick="reproducirSonido('sonido2.mp3')">By H64Ox</button>
+
+    <script>
+        function reproducirSonido(archivo) {
+            let audio = new Audio(archivo);
+            audio.play();
+        }
+    </script>
+</body>
+</html>
